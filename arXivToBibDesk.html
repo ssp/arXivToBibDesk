@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<title>arXiv to BibDesk AppleScript</title>
+<style type="text/css">
+body { background:#333; font-family:Optima, Verdana, Helvetica, sans-serif; width:600px; margin:auto; color:#fff; line-height:1.5em;}
+a, a:hover, a:visited {color:#fff;}
+body:hover a { background:#445; }
+a:hover {background:#555;}
+h1 { margin:2em 0px 0em;}
+h2 { margin:3em 0px 1em; font-size:120%;}
+h1+p {margin:0.3em 0px 2em;padding:0px;}
+p {margin:0.7em 0px;}
+.centred {text-align:center;}
+.initiallyhidden {display:none;}
+ol, ul {padding-left: 2em;}
+#setupdetails {padding: 1em;}
+#setupdetails:target {display:block; background:#444;}
+</style>
+
+
+</head>
+<body>
+<h1>arXiv → BibDesk
+<img src="http://earthlingsoft.net/ssp/blog/graphics/AppleScriptIcon.png" style="width:128px;height:128px;float:right;" alt="Script Icon">
+
+<span style="float:right;clear:right;margin-left:1em;margin-top:2em;"> </span>
+</h1> 
+
+<p>from the preprint <a href="http://arxiv.org/">arXiv</a> to your <a href="http://bibdesk.sourceforge.net/">BibDesk</a> database in a single step</p>
+
+<p>
+<a href="/ssp/bibdesk/arXivToBibDesk.scptd.zip"><strong>Download</strong></a> the AppleScript. 
+</p><p>
+<strong>written by:</strong>
+<a href="http://wockel.eu/">Christoph Wockel</a> 
+and <a href="http://earthlingsoft.net/ssp/">Sven-S. Porst</a>.
+</p><p>
+<strong>Feedback:</strong> <a href="mailto:ssp-web@earthlingsoft.net?subject=arXiv%20To%20BibDesk">Send an e-mail</a>.
+</p>
+
+
+<h2 id="setup">Setup</h2>
+<p>
+<a href="/ssp/bibdesk/arXivToBibDesk.scptd.zip">Download</a> the script and put it in a location where you can easily run it.<br>
+You need to download the free <a href="http://earthlingsoft.net/UnicodeChecker/">UnicodeChecker</a> application for the script to work</a>.<br>
+<span class="details"><a href="#setupdetails">Read recommended setup guide »</a></span>
+</p>
+<div class="initiallyhidden" id="setupdetails">
+We recommend setting the script up in the following way: 
+<ol>
+<li><p>Activate the Script Menu: In Mac OS X.6 this is done in the General pane of the Preferences in the AppleScript Editor application, in earlier versions of Mac OS X it can be done using the  <a href="http://developer.apple.com/documentation/applescript/conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1148318">AppleScript Utility</a> application.</p>
+</li><li>
+<p>Place the downloaded script in the subfolder ‘Safari’ of the folder ‘Applications’ of the folder ‘Scripts’ of the folder ‘Library’ inside your home folder.
+</p>
+<p class="centred"><img src="bibdesk/PathToarXivToBibDeskScript.png" alt="path to the script in /Users/ssp/Library/Scripts/Applications/Safari/"></p>
+<p>You may need to create some of these folders yourself. Starting with Mac OS X.7, the ‘Library’ folder is hidden by default; You can get into it anyway by using the ‘Go To Folder…’ command (⌘⇧G) in the Finder and typing in the name.</p>
+</li><li>
+<p>Create a ‘BibDesk’ folder next to the ‘Safari’ folder you placed the script in and put an alias to the script in there. [You can create an alias by dragging the file while holding the ⌘ and ⌥ keys]. </p>
+<p class="centred"><img src="bibdesk/ScriptAndAlias.png" alt="Complete setup of the script for use in Safari and BibDesk"></p>
+</li><li>
+<p>That’s it. The system’s script menu should be visible at the right hand side of the menu bar now and it should offer the ‘arXiv → BibDesk’ command in both Safari and BibDesk:</p>
+<p class="centred"><img src="bibdesk/ScriptMenuWithScript.png" alt="Script Menu containing the script"></p>
+</li>
+</ol>
+<p>
+Alternatively you can place the downloaded script in the subfolder ‘Scripts’ of the folder ‘BibDesk’ of the folder ‘Application Support’ of the folder ‘Library’ of your home folder. It will then become available in <a href="http://bibdesk.sourceforge.net/manual/BibDesk%20Help_80.html">BibDesk’s own script menu</a> only. 
+</p>
+</div>
+
+
+<h2>Instructions</h2> 
+
+<ol>
+<li>Make sure you have a bibliography file open in BibDesk and your papers folder is set in BibDesk’s Auto File preferences.</li>
+<li>Navigate to a preprint’s abstract page on the arXiv in Safari’s frontmost tab and window.</li>
+<li>Run the script by selecting it in the script menu.</li>
+</ol>
+
+<p>
+If everything goes as intended you will end up with
+</p>
+<ul>
+<li>An entry for the preprint in your frontmost bibliography file,</li>
+<li>the preprint’s abstract added to that entry,</li>
+<li>the PDF for the preprint downloaded to your papers folder,</li>
+<li>the PDF as well as the arXiv URL referenced from the preprint’s entry.</li>
+</ul>
+
+<h2>Using Goole Chrome?</h2>
+<p>
+Currently the script contains commands which should work with Google Chrome as well. To use them, you will need to open the script in AppleScript Editor, comment out the block relating to Safari at the beginning and uncomment the lines relating to Google Chrome. You will probably want to adapt the setup instructions to be more Chrome-centric in that case as well.
+</p>
+
+<h2>Thanks</h2>
+<p> 
+go to both the preprint <a href="http://arxiv.org/">arXiv</a> and the <a href="http://bibdesk.sourceforge.net/">BibDesk</a> team for their great service and software respectively. Additional credit goes to Christiaan Hofman who wrote the download function the script uses. In case this script improves your life significantly, please consider donating to either of those projects.
+</p>
+
+
+
+<h2>
+Version History
+</h2>
+<dl>
+<dt>v12 (2012-05-01)</dt>
+<dd>Remove dependency on URL Access Scripting (which Apple removed in X.7) and use curl instead.</dd>
+<dt>v11 (2009-08-24)</dt>
+<dd>Attempt to remove affiliation from author names</dd>
+<dt>v10 (2009-08-12)</dt>
+<dd>Stop setting the publication’s »BibTeX string« property and use the »import« command instead to work in BibDesk 1.3.22.</dd>
+<dt>v9 (2009-03-17)</dt>
+<dd>Handle quotation marks in abstracts more gracefully (to avoid BibTeX warnings for the resulting entry). </dd>
+<dt>v8 (2009-03-10)</dt>
+<dd>Handle old article IDs with a colon (e.g. arXiv:q-alg) properly.</dd>
+<dt>v7 (2008-10-22)</dt>
+<dd>Delete temporary files (rather than moving them to the Trash which irritatingly gives the Finder’s »trashed« sound).</dd>
+<dt>v6 (2008)</dt>
+<dd>Stopped failing on old maths papers without a . in their ID.</dd>
+<dt>v5 (2008)</dt>
+<dd>Saves HTML to disk before passing it to the perl script to avoid escaping problems.</dd>
+<dt>v4 (2008)<dt>
+<dd>Runs shell script with proper escapes, asks before overwriting files.</dd>
+<dt>v3 (2008)</dt>
+<dd>Adds Christoph’s perl script to parse arXiv page into a BibTeX entry.</dd>
+<dt>v2 (2008)</dt>
+<dd>Updated for new style arXiv IDs using citebase and the linked file/URL fields.</dd>
+<dt>v1 (2004)<dt>
+<dd>Initial version ca 2004 using the UC Davis arXiv front.</dd>
+</dl>
+
+<hr style="margin-top:2.5em;">
+<p style="font-style:italic;text-align:right;margin-top:0px;"><a href="mailto:ssp-web@earthlingsoft.net">Sven-S. Porst</a></p>
+</body>
+</html>
