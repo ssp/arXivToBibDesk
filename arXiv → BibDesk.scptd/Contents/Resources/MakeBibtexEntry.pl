@@ -52,7 +52,12 @@ foreach("comments,comments","msc-classes,mrclass","arxivid,eprint","report-numbe
 foreach(keys(%entries)){
 
   # replace html-tags
-  $entries{$_} =~ s/<[^>]*>//g;
+	if($_ eq "author"){
+		while($entries{$_} =~ /\([^()]*\)/){
+			$entries{$_} = $PREMATCH.$POSTMATCH;
+		}
+	}
+ 	$entries{$_} =~ s/<[^>]*>//g;
 
   if($_ eq "eprint"){$entries{"eprint"} =~ s/(v[0-9]+)\s+\S*\s*$//}
   if($_ eq "author"){$entries{"author"} =~ s/\s*,\s*/ and /g}
