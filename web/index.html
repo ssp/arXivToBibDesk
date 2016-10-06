@@ -103,14 +103,16 @@ go to both the preprint <a href="http://arxiv.org/">arXiv</a> and the <a href="h
 Version History
 </h2>
 <dl>
-<dt>Current: v13 (2012-10-01)</dt>
-<dd>Load data from <a href="http://de.arxiv.org/help/api/index">arXiv API</a> instead of using regular expressions on the web page. Remove dependency on <a href="http://earthlingsoft.net/UnicodeChecker/">UnicodeChecker</a>.</dd>
+<dt>Current: v14 (2016-10-07)</dt>
+<dd>Use https to download PDFs from the arXiv. This avoids the failing to handle the 301 redirect given for non-encrypted connections.</dd>
 </dl>
 <p>
 See <a href="https://github.com/ssp/arXivToBibDesk">changes since v10 at github</a>.
 <a href="#oldversions">More information about older versions »</a>
 </p>
 <dl class="initiallyhidden" id="oldversions">
+<dt><a href="bibdesk/arXivToBibDesk.v13.scptd.zip">v13</a> (2012-10-01)</dt>
+<dd>Load data from <a href="http://de.arxiv.org/help/api/index">arXiv API</a> instead of using regular expressions on the web page. Remove dependency on <a href="http://earthlingsoft.net/UnicodeChecker/">UnicodeChecker</a>.</dd>
 <dt><a href="bibdesk/arXivToBibDesk.v12.scptd.zip">v12</a> (2012-05-01)</dt>
 <dd>Remove dependency on ‘URL Access Scripting’ (which Apple removed in X.7) and use ‘curl’ instead.</dd>
 <dt><a href="bibdesk/arXivToBibDesk.v11.scptd.zip">v11</a> (2009-08-24)</dt>

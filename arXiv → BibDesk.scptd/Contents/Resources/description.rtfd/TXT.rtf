@@ -1,18 +1,41 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-{\fonttbl\f0\fnil\fcharset0 Geneva;}
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Medium;\f1\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red76\green78\blue78;}
-\pard\tx576\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6337\tx6913\tx7489\tx8065\tx8641\tx9217\tx9793\tx10369\tx10945\tx11521\tx12097\tx12674\tx13250\tx13826\tx14402\tx14978\tx15554\tx16130\tx16706\tx17282\tx17858\tx18435\tx19011\tx19587\tx20163\tx20739\tx21315\tx21891\tx22467\tx23043\tx23619\tx24195\tx24772\tx25348\tx25924\tx26500\tx27076\tx27652\tx28228\tx28804\tx29380\tx29956\tx30532\tx31109\tx31685\tx32261\tx32837\tx33413\tx33989\tx34565\tx35141\tx35717\tx36293\tx36870\tx37446\tx38022\tx38598\tx39174\tx39750\tx40326\tx40902\tx41478\tx42054\tx42630\tx43207\tx43783\tx44359\tx44935\tx45511\tx46087\tx46663\tx47239\tx47815\tx48391\tx48967\tx49544\tx50120\tx50696\tx51272\tx51848\tx52424\tx53000\tx53576\tx54152\tx54728\tx55305\tx55881\tx56457\tx57033\tx57609\pardirnatural
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c29804\c30588\c30588;}
+\pard\tx577\tx1155\tx1733\tx2311\tx2889\tx3467\tx4045\tx4623\tx5201\tx5779\tx6357\tx6935\tx7513\tx8091\tx8669\tx9247\tx9825\tx10403\tx10981\tx11559\tx12137\tx12715\tx13293\tx13871\tx14449\tx15027\tx15605\tx16183\tx16761\tx17339\tx17917\tx18495\tx19072\tx19650\tx20228\tx20806\tx21384\tx21962\tx22540\tx23118\tx23696\tx24274\tx24852\tx25430\tx26008\tx26586\tx27164\tx27742\tx28320\tx28898\tx29476\tx30054\tx30632\tx31210\tx31788\tx32366\tx32944\tx33522\tx34100\tx34678\tx35256\tx35834\tx36412\tx36990\tx37567\tx38145\tx38723\tx39301\tx39879\tx40457\tx41035\tx41613\tx42191\tx42769\tx43347\tx43925\tx44503\tx45081\tx45659\tx46237\tx46815\tx47393\tx47971\tx48549\tx49127\tx49705\tx50283\tx50861\tx51439\tx52017\tx52595\tx53173\tx53751\tx54329\tx54907\tx55485\tx56062\tx56640\tx57218\tx57796\pardirnatural\partightenfactor0
 
-\f0\fs20 \cf2 \CocoaLigature0 Script to fill BibDesk with the BibTeX record for an arXiv paper and the relevant links files\
-* open the article's arXiv abstract page in Safari \
-* make sure BibDesk has your bibliography file open as its frontmost document and the papers path set in Auto File preferences\
-* run the script\
-* arXiv article will be added to the BibDesk database\
-* article\'92s PDF will be downloaded from arXiv to BibDesk\'92s papers folder\
-* link to article\'92s arXiv abstract page will be added to the BibDesk entry\
-* article\'92s abstract will be inserted into the BibDesk entry\
+\f0\fs28 \cf2 \CocoaLigature0 arXivToBibDesk
+\f1\fs24 \
+\
+A script to add the BibTeX record for an arXiv paper along with the relevant links and files to BibDesk.\
+\
+
+\f0 Usage\
+
+\f1 \
+\'95 open the article's arXiv abstract page in Safari \
+\'95 make sure BibDesk has your bibliography file open as its frontmost document and the papers path set in Auto File preferences\
+\'95 run the script\
+\'95 arXiv article will be added to the BibDesk database\
+\'95 article\'92s PDF will be downloaded from arXiv to BibDesk\'92s papers folder\
+\'95 link to article\'92s arXiv abstract page will be added to the BibDesk entry\
+\'95 article\'92s abstract will be inserted into the BibDesk entry\
 (loads of potential points of failure\'85)\
 \
+
+\f0 Origin\
+
+\f1 \
+Written by Sven-S. Porst <ssp-web@earthlingsoft.net>\
+Website: http://earthlingsoft.net/ssp/arXivToBibDesk/\
+github: https://github.com/ssp/arXivToBibDesk\
+\
+\
+
+\f0 Version History
+\f1 \
+\
+v14 - use https to download papers so we don\'92t fail downloading via http (2016-10-07)\
 v13 - rewrite arXiv metadata extraction to use the arXiv API (2012-10-01)\
 v12 - remove dependency on URL Access Scripting (which Apple removed in X.7) and use curl instead (2012-05-01)\
 v11 - attempt to remove affiliation from author names (2009-08-24)\
